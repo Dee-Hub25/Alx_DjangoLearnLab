@@ -70,7 +70,6 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',  # Needed for auth
->>>>>>> 7aa974c555bc07f3254b62f9a28807dc9bd797d8
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
