@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 Django settings for LibraryProject project.
 
@@ -55,15 +54,6 @@ ROOT_URLCONF = 'LibraryProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.request',
-=======
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / 'relationship_app' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -76,7 +66,6 @@ TEMPLATES = [
         },
     },
 ]
-<<<<<<< HEAD
 
 WSGI_APPLICATION = 'LibraryProject.wsgi.application'
 
@@ -132,5 +121,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-=======
->>>>>>> 7aa974c555bc07f3254b62f9a28807dc9bd797d8
