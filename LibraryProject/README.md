@@ -1,1 +1,1 @@
-"# LibraryProject - My First Django App" 
+"# LibraryProject" 
