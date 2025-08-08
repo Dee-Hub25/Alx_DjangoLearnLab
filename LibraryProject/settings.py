@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 Django settings for LibraryProject project.
 
@@ -21,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zc2_@l-wpj_q(r^mc4eyc0d8wajet=_%%o0954)t(1wbb3(_k#'
+SECRET_KEY = 'django-insecure-ceu@ec!jde#2g-b#rk_i(1lq3240)w)9d8@u_6$f^rt7oxm7)v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -60,24 +59,12 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
-=======
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'relationship_app' / 'templates'],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # Needed for auth
->>>>>>> 7aa974c555bc07f3254b62f9a28807dc9bd797d8
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
-<<<<<<< HEAD
 
 WSGI_APPLICATION = 'LibraryProject.wsgi.application'
 
@@ -133,5 +120,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-=======
->>>>>>> 7aa974c555bc07f3254b62f9a28807dc9bd797d8
