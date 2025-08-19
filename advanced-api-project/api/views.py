@@ -7,52 +7,32 @@ from rest_framework import generics, permissions
 from .models import Book
 from .serializers import BookSerializer
 
-# ListView: Retrieve all books
+# List all books (read-only for unauthenticated users)
 class BookListView(generics.ListAPIView):
-    """
-    GET: Retrieve a list of all books
-    Accessible by all users (read-only)
-    """
     queryset = Book.objects.all()
     serializer_class = BookSerializer
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-# DetailView: Retrieve a single book by ID
+# Retrieve a single book (read-only for unauthenticated users)
 class BookDetailView(generics.RetrieveAPIView):
-    """
-    GET: Retrieve a single book by ID
-    Accessible by all users (read-only)
-    """
     queryset = Book.objects.all()
     serializer_class = BookSerializer
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-# CreateView: Add a new book
+# Create a book (authenticated users only)
 class BookCreateView(generics.CreateAPIView):
-    """
-    POST: Add a new book
-    Restricted to authenticated users only
-    """
     queryset = Book.objects.all()
     serializer_class = BookSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-# UpdateView: Modify an existing book
+# Update a book (authenticated users only)
 class BookUpdateView(generics.UpdateAPIView):
-    """
-    PUT/PATCH: Update an existing book
-    Restricted to authenticated users only
-    """
     queryset = Book.objects.all()
     serializer_class = BookSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-# DeleteView: Remove a book
+# Delete a book (authenticated users only)
 class BookDeleteView(generics.DestroyAPIView):
-    """
-    DELETE: Remove a book
-    Restricted to authenticated users only
-    """
     queryset = Book.objects.all()
     serializer_class = BookSerializer
     permission_classes = [permissions.IsAuthenticated]
