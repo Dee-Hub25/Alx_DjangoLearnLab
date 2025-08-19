@@ -45,12 +45,18 @@ INSTALLED_APPS = [
 
     # Local apps
     "api",
+    'django_filters',
 ]
 
 # DRF can be customized later when needed
 REST_FRAMEWORK = {
-    # Keeping defaults for now; we’ll add filtering/search/ordering config in later tasks.
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter',
+    ]
 }
+    # Keeping defaults for now; we’ll add filtering/search/ordering config in later tasks.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
